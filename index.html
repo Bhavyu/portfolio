@@ -151,93 +151,102 @@
             <div class="section-header">
                 <span class="section-tag">My expertise</span>
                 <h2 class="section-title">Technical Arsenal</h2>
+                <p class="section-subtitle">Technologies I wield to build powerful systems</p>
             </div>
-            <div class="skills-bento">
-                <div class="skill-box-large">
-                    <div class="skill-header">
-                        <span class="skill-icon"><span class="material-symbols-outlined">bolt</span></span>
+
+            <!-- Orbit visual -->
+            <div class="arsenal-orbit">
+                <div class="orbit-center">
+                    <span class="orbit-label">CORE</span>
+                    <span class="orbit-name">Backend</span>
+                </div>
+                <div class="orbit-ring orbit-ring-1">
+                    <div class="orbit-node" style="--angle: 0deg;"><span>Python</span></div>
+                    <div class="orbit-node" style="--angle: 72deg;"><span>Golang</span></div>
+                    <div class="orbit-node" style="--angle: 144deg;"><span>Django</span></div>
+                    <div class="orbit-node" style="--angle: 216deg;"><span>FastAPI</span></div>
+                    <div class="orbit-node" style="--angle: 288deg;"><span>Flask</span></div>
+                </div>
+                <div class="orbit-ring orbit-ring-2">
+                    <div class="orbit-node" style="--angle: 30deg;"><span>AWS</span></div>
+                    <div class="orbit-node" style="--angle: 90deg;"><span>Docker</span></div>
+                    <div class="orbit-node" style="--angle: 150deg;"><span>MongoDB</span></div>
+                    <div class="orbit-node" style="--angle: 210deg;"><span>PostgreSQL</span></div>
+                    <div class="orbit-node" style="--angle: 270deg;"><span>GCP</span></div>
+                    <div class="orbit-node" style="--angle: 330deg;"><span>Jenkins</span></div>
+                </div>
+            </div>
+
+            <!-- Detailed cards below -->
+            <div class="arsenal-cards">
+                <div class="arsenal-card">
+                    <div class="arsenal-card-glow"></div>
+                    <div class="arsenal-card-header">
+                        <div class="arsenal-icon"><span class="material-symbols-outlined">bolt</span></div>
                         <h3>Backend Development</h3>
                     </div>
-                    <p class="skill-desc">Building high-performance server-side applications</p>
-                    <div class="skill-tags-grid">
-                        <span class="skill-badge">Python</span>
-                        <span class="skill-badge">Golang</span>
-                        <span class="skill-badge">Django</span>
-                        <span class="skill-badge">Flask</span>
-                        <span class="skill-badge">FastAPI</span>
+                    <p class="arsenal-desc">Building high-performance server-side applications</p>
+                    <div class="arsenal-bar-group">
+                        <div class="arsenal-bar"><span class="bar-label">Python</span><div class="bar-track"><div class="bar-fill" style="--fill: 95%;"></div></div></div>
+                        <div class="arsenal-bar"><span class="bar-label">Golang</span><div class="bar-track"><div class="bar-fill" style="--fill: 85%;"></div></div></div>
+                        <div class="arsenal-bar"><span class="bar-label">Django / FastAPI</span><div class="bar-track"><div class="bar-fill" style="--fill: 90%;"></div></div></div>
+                        <div class="arsenal-bar"><span class="bar-label">Flask</span><div class="bar-track"><div class="bar-fill" style="--fill: 80%;"></div></div></div>
                     </div>
                 </div>
 
-                <div class="skill-box-medium">
-                    <div class="skill-header">
-                        <span class="skill-icon"><span class="material-symbols-outlined">cloud</span></span>
+                <div class="arsenal-card">
+                    <div class="arsenal-card-glow"></div>
+                    <div class="arsenal-card-header">
+                        <div class="arsenal-icon"><span class="material-symbols-outlined">cloud</span></div>
                         <h3>Cloud & DevOps</h3>
                     </div>
-                    <div class="skill-tags-grid">
-                        <span class="skill-badge">AWS</span>
-                        <span class="skill-badge">GCP</span>
-                        <span class="skill-badge">Docker</span>
-                        <span class="skill-badge">Jenkins</span>
-                        <span class="skill-badge">CI/CD</span>
-                        <span class="skill-badge">AWS SSM</span>
-                        <span class="skill-badge">Secrets Manager</span>
+                    <p class="arsenal-desc">Deploying and managing scalable infrastructure</p>
+                    <div class="arsenal-tags">
+                        <span class="arsenal-tag">AWS</span>
+                        <span class="arsenal-tag">GCP</span>
+                        <span class="arsenal-tag">Docker</span>
+                        <span class="arsenal-tag">Jenkins</span>
+                        <span class="arsenal-tag">CI/CD</span>
+                        <span class="arsenal-tag">AWS SSM</span>
+                        <span class="arsenal-tag">Secrets Manager</span>
                     </div>
                 </div>
 
-                <div class="skill-box-medium">
-                    <div class="skill-header">
-                        <span class="skill-icon"><span class="material-symbols-outlined">database</span></span>
+                <div class="arsenal-card">
+                    <div class="arsenal-card-glow"></div>
+                    <div class="arsenal-card-header">
+                        <div class="arsenal-icon"><span class="material-symbols-outlined">database</span></div>
                         <h3>Databases</h3>
                     </div>
-                    <div class="skill-tags-grid">
-                        <span class="skill-badge">MongoDB</span>
-                        <span class="skill-badge">PostgreSQL</span>
-                        <span class="skill-badge">SQL</span>
-                        <span class="skill-badge">NoSQL</span>
-                        <span class="skill-badge">GraphDB</span>
-                        <span class="skill-badge">Elasticsearch</span>
+                    <p class="arsenal-desc">Designing optimized data storage solutions</p>
+                    <div class="arsenal-tags">
+                        <span class="arsenal-tag">MongoDB</span>
+                        <span class="arsenal-tag">PostgreSQL</span>
+                        <span class="arsenal-tag">Elasticsearch</span>
+                        <span class="arsenal-tag">GraphDB</span>
+                        <span class="arsenal-tag">SQL</span>
+                        <span class="arsenal-tag">NoSQL</span>
                     </div>
                 </div>
 
-                <div class="skill-box-small">
-                    <div class="skill-header">
-                        <span class="skill-icon"><span class="material-symbols-outlined">bar_chart</span></span>
-                        <h3>Data & Analytics</h3>
+                <div class="arsenal-card">
+                    <div class="arsenal-card-glow"></div>
+                    <div class="arsenal-card-header">
+                        <div class="arsenal-icon"><span class="material-symbols-outlined">build</span></div>
+                        <h3>Tools & Ecosystem</h3>
                     </div>
-                    <div class="skill-tags-grid">
-                        <span class="skill-badge">Pandas</span>
-                        <span class="skill-badge">NumPy</span>
-                        <span class="skill-badge">PySpark</span>
-                    </div>
-                </div>
-
-                <div class="skill-box-small">
-                    <div class="skill-header">
-                        <span class="skill-icon"><span class="material-symbols-outlined">assignment</span></span>
-                        <h3>Methodologies</h3>
-                    </div>
-                    <div class="skill-tags-grid">
-                        <span class="skill-badge">Agile</span>
-                        <span class="skill-badge">Scrum</span>
-                        <span class="skill-badge">JIRA</span>
-                        <span class="skill-badge">SDLC</span>
-                    </div>
-                </div>
-
-                <div class="skill-box-wide">
-                    <div class="skill-header">
-                        <span class="skill-icon"><span class="material-symbols-outlined">build</span></span>
-                        <h3>Tools & Technologies</h3>
-                    </div>
-                    <div class="skill-tags-grid">
-                        <span class="skill-badge">REST API</span>
-                        <span class="skill-badge">Apache Pulsar</span>
-                        <span class="skill-badge">Elastic APM</span>
-                        <span class="skill-badge">Git</span>
-                        <span class="skill-badge">Bitbucket</span>
-                        <span class="skill-badge">Jupyter Notebook</span>
-                        <span class="skill-badge">Postman</span>
-                        <span class="skill-badge">Sentry</span>
+                    <p class="arsenal-desc">Essential tools powering my workflow</p>
+                    <div class="arsenal-tags">
+                        <span class="arsenal-tag">REST API</span>
+                        <span class="arsenal-tag">Apache Pulsar</span>
+                        <span class="arsenal-tag">Elastic APM</span>
+                        <span class="arsenal-tag">Git</span>
+                        <span class="arsenal-tag">Postman</span>
+                        <span class="arsenal-tag">Sentry</span>
+                        <span class="arsenal-tag">Pandas</span>
+                        <span class="arsenal-tag">PySpark</span>
+                        <span class="arsenal-tag">Agile</span>
+                        <span class="arsenal-tag">JIRA</span>
                     </div>
                 </div>
             </div>
@@ -250,32 +259,53 @@
                 <span class="section-tag">Professional Journey</span>
                 <h2 class="section-title">Work Experience</h2>
             </div>
-            <div class="experience-grid">
-                <div class="exp-card">
-                    <div class="exp-number">01</div>
-                    <div class="exp-period">Oct 2024 - Present</div>
-                    <h3>Software Engineer</h3>
-                    <h4>Cornerstone - OnDemand, Mumbai</h4>
-                    <ul class="exp-highlights">
-                        <li>Implemented caching mechanisms reducing graph database load and improving performance under high request volumes</li>
-                        <li>Optimized system architecture by offloading query overhead from ArangoDB to Elasticsearch, enhancing response times</li>
-                        <li>Integrated Apache Pulsar for efficient communication between products, enhancing system decoupling and reliability</li>
-                        <li>Proposed and implemented Elastic APM for end-to-end performance monitoring with improved observability</li>
-                        <li>Migrated DevSecOps to AWS SSM and Secrets Manager using Pydantic blueprints for secure environment management</li>
-                    </ul>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-dot">
+                        <div class="timeline-dot-pulse"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-period">Oct 2024 — Present</span>
+                            <span class="timeline-status active">● Active</span>
+                        </div>
+                        <h3>Software Engineer</h3>
+                        <h4>Cornerstone OnDemand, Mumbai</h4>
+                        <ul class="exp-highlights">
+                            <li>Implemented caching mechanisms reducing graph database load and improving performance under high request volumes</li>
+                            <li>Optimized system architecture by offloading query overhead from ArangoDB to Elasticsearch</li>
+                            <li>Integrated Apache Pulsar for efficient inter-product communication</li>
+                            <li>Proposed Elastic APM for end-to-end performance monitoring</li>
+                            <li>Migrated DevSecOps to AWS SSM and Secrets Manager</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Python</span><span>Elasticsearch</span><span>Apache Pulsar</span><span>AWS</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="exp-card">
-                    <div class="exp-number">02</div>
-                    <div class="exp-period">Jul 2022 - Oct 2024</div>
-                    <h3>Backend Developer</h3>
-                    <h4>Think360.ai (ICAMS Company), Mumbai</h4>
-                    <ul class="exp-highlights">
-                        <li>Led development and monitoring of APIs ensuring seamless interactions between system engines and client applications</li>
-                        <li>Engaged with clients to gather technical requirements and ensure alignment with project objectives</li>
-                        <li>Achieved 30% cost reduction through code optimization, caching integration, and AWS optimization strategies</li>
-                        <li>Executed CI/CD pipeline for seamless code integration to deployment using Jenkins</li>
-                        <li>Contributed to sprint planning meetings coordinating deliverables with development teams</li>
-                    </ul>
+
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-period">Jul 2022 — Oct 2024</span>
+                            <span class="timeline-duration">2 yrs 3 mos</span>
+                        </div>
+                        <h3>Backend Developer</h3>
+                        <h4>Think360.ai (ICAMS), Mumbai</h4>
+                        <ul class="exp-highlights">
+                            <li>Led development and monitoring of APIs ensuring seamless system interactions</li>
+                            <li>Engaged with clients nationwide to gather technical requirements</li>
+                            <li>Achieved 30% cost reduction through optimization and caching strategies</li>
+                            <li>Executed CI/CD pipelines using Jenkins for seamless deployment</li>
+                            <li>Contributed to sprint planning coordinating deliverables with dev teams</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Python</span><span>Django</span><span>AWS</span><span>Jenkins</span><span>MongoDB</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

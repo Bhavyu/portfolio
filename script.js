@@ -12,10 +12,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     document.querySelectorAll(
-        '.stat-card, .expertise-card, .exp-card, .edu-card, .achievement-card, .skill-box-large, .skill-box-medium, .skill-box-small, .skill-box-wide, .contact-detail-item, .social-link'
+        '.stat-card, .expertise-card, .exp-card, .edu-card, .achievement-card, .arsenal-card, .timeline-item, .contact-detail-item, .social-link'
     ).forEach(el => {
         el.style.opacity = '0';
         observer.observe(el);
+    });
+
+    // ── Skill bar fill animation ──
+    const barObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                barObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.bar-fill').forEach(bar => {
+        barObserver.observe(bar);
     });
 
     // ── Smooth scroll nav ──
