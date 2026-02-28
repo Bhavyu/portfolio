@@ -27,6 +27,7 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#certifications" class="nav-link">Achievements</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -314,6 +315,72 @@
             </div>
         </div>
     </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Innovation showcase</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Architecting solutions that redefine financial intelligence and enterprise scalability</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-project="algo360">
+                    <div class="project-glow"></div>
+                    <div class="project-icon"><span class="material-symbols-outlined">analytics</span></div>
+                    <h3>Algo360</h3>
+                    <p>Revolutionary alternative credit scoring engine processing 1000+ micro-scores across 10 financial domains using ML-powered SMS analytics</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>FastAPI</span><span>ML</span><span>AWS</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="skills-studio">
+                    <div class="project-glow"></div>
+                    <div class="project-icon"><span class="material-symbols-outlined">hub</span></div>
+                    <h3>Skills Studio</h3>
+                    <p>Enterprise-grade taxonomy intelligence platform harmonizing skill graphs across organizations with distributed processing at scale</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>Golang</span><span>ArangoDB</span><span>Kafka</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="flowxpert">
+                    <div class="project-glow"></div>
+                    <div class="project-icon"><span class="material-symbols-outlined">draw</span></div>
+                    <h3>FlowXpert</h3>
+                    <p>Low-code frontend builder transforming drag-and-drop components into production-ready code with automated workflow orchestration</p>
+                    <div class="project-tags">
+                        <span>Golang</span><span>PostgreSQL</span><span>N8N</span><span>TYK</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project="stolt">
+                    <div class="project-glow"></div>
+                    <div class="project-icon"><span class="material-symbols-outlined">sailing</span></div>
+                    <h3>Stolt Emission Forecasting</h3>
+                    <p>Maritime analytics powerhouse automating emission forecasting and ship performance ranking using Azure ML pipelines</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>Azure ML</span><span>SQL</span><span>Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="modal-body" id="modalBody"></div>
+            <div class="related-projects">
+                <h3>Explore More Projects</h3>
+                <div class="related-grid" id="relatedGrid"></div>
+            </div>
+        </div>
+    </div>
 
     <section id="education" class="education">
         <div class="container">
