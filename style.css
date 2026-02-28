@@ -97,7 +97,7 @@ body {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    z-index: 0;
+    z-index: 1;
     pointer-events: none;
 }
 
@@ -107,7 +107,7 @@ body {
     height: 2px;
     background: var(--accent);
     border-radius: 50%;
-    opacity: 0.3;
+    opacity: 0.4;
     box-shadow: 0 0 6px var(--accent-glow);
 }
 
@@ -117,6 +117,7 @@ body {
     background: var(--accent);
     transform-origin: left center;
     pointer-events: none;
+    opacity: 0.25;
 }
 
 /* ── Navbar ── */
@@ -441,6 +442,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 32px;
+    position: relative;
+    z-index: 2;
 }
 
 .section-header {
@@ -667,7 +670,6 @@ body {
     padding: 120px 0;
     background: var(--bg-secondary);
     position: relative;
-    overflow: hidden;
 }
 
 .skills-section::before {
@@ -726,7 +728,8 @@ body {
     position: absolute;
     top: 50%; left: 50%;
     border-radius: 50%;
-    border: 1px solid rgba(0, 229, 255, 0.08);
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
 }
 
 .orbit-ring-1 {
@@ -742,8 +745,14 @@ body {
 }
 
 @keyframes orbitPulse {
-    0%, 100% { border-color: rgba(0, 229, 255, 0.08); }
-    50% { border-color: rgba(0, 229, 255, 0.18); }
+    0%, 100% { 
+        border-color: rgba(0, 229, 255, 0.25);
+        box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+    }
+    50% { 
+        border-color: rgba(0, 229, 255, 0.4);
+        box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+    }
 }
 
 .orbit-node {
@@ -939,6 +948,7 @@ body {
     padding: 120px 0;
     background: var(--bg-secondary);
     position: relative;
+    overflow: hidden;
 }
 
 .projects::before {
@@ -947,6 +957,22 @@ body {
     top: 0; left: 0;
     width: 100%; height: 1px;
     background: linear-gradient(90deg, transparent, var(--accent-dim), transparent);
+}
+
+.projects::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 60% 40% at 20% 30%, var(--accent-glow), transparent),
+        radial-gradient(ellipse 50% 35% at 80% 70%, var(--accent-secondary-glow), transparent);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.projects .container {
+    position: relative;
+    z-index: 1;
 }
 
 .projects-grid {

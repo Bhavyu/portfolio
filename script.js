@@ -151,8 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!canvas) return;
 
     const particles = [];
-    const particleCount = 40;
-    const connectionDistance = 120;
+    const particleCount = 80;
+    const connectionDistance = 150;
 
     class Particle {
         constructor() {
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     line.style.left = particles[j].x + 'px';
                     line.style.top = particles[j].y + 'px';
                     line.style.transform = `rotate(${angle}rad)`;
-                    line.style.opacity = (1 - distance / connectionDistance) * 0.2;
+                    line.style.opacity = (1 - distance / connectionDistance) * 0.25;
                     canvas.appendChild(line);
                 }
             }
