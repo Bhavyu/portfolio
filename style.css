@@ -1479,6 +1479,39 @@ footer {
     }
 }
 
+/* ── Hamburger ── */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 /* ── Responsive ── */
 @media (max-width: 1024px) {
     .hero-container {
@@ -1501,34 +1534,121 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .nav-menu { display: none; }
+    /* Hamburger menu */
+    .hamburger { display: flex; }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100vh;
+        background: rgba(10, 10, 15, 0.97);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        z-index: 1000;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu .nav-link {
+        font-size: 1.2rem;
+        padding: 14px 32px;
+    }
+
+    /* Hero */
     .nav-container { padding: 14px 20px; }
     .hero-container { padding: 100px 20px 60px; }
-    .hero-name { font-size: 2.4rem; }
-    .container, .container-wide { padding: 0 20px; }
-    .about, .skills-section, .experience, .education, .certifications, .contact {
-        padding: 80px 0;
-    }
-    .section-header { margin-bottom: 40px; }
-    .expertise-grid { grid-template-columns: 1fr; }
-    .achievements-grid { grid-template-columns: 1fr; }
-    .arsenal-cards { grid-template-columns: 1fr; }
-    .arsenal-orbit { width: 300px; height: 300px; }
-    .orbit-ring-1 { width: 170px; height: 170px; }
-    .orbit-ring-2 { width: 280px; height: 280px; }
-    .orbit-ring-1 .orbit-node { transform: rotate(var(--angle)) translateX(85px); }
-    .orbit-ring-2 .orbit-node { transform: rotate(var(--angle)) translateX(140px); }
-    .education-grid { grid-template-columns: 1fr; }
+    .hero-name { font-size: 2.2rem; }
+    .hero-greeting { font-size: 1rem; }
+    .hero-tag { font-size: 0.7rem; padding: 6px 14px; }
+    .hero-roles { gap: 8px; }
+    .role-item { font-size: 0.75rem; padding: 4px 10px; }
+    .hero-description { font-size: 0.9rem; }
     .cta-buttons { flex-direction: column; align-items: center; }
+    .btn { padding: 12px 24px; font-size: 0.85rem; width: 100%; max-width: 280px; justify-content: center; }
+    .code-window { max-width: 100%; }
+    .code-content { font-size: 0.72rem; padding: 16px; }
+
+    /* Sections */
+    .container, .container-wide { padding: 0 16px; }
+    .about, .skills-section, .experience, .education, .certifications, .contact {
+        padding: 60px 0;
+    }
+    .section-header { margin-bottom: 32px; }
+    .section-title { font-size: 1.8rem; }
+    .section-tag { font-size: 0.68rem; padding: 5px 12px; }
+
+    /* About */
+    .about-layout { grid-template-columns: 1fr; gap: 32px; }
+    .about-intro { font-size: 1rem; }
+    .about-main p { font-size: 0.88rem; }
+    .about-stats { flex-direction: row; flex-wrap: wrap; gap: 12px; }
+    .stat-card { padding: 20px; flex: 1; min-width: 140px; }
+    .stat-number { font-size: 1.6rem; }
+    .expertise-grid { grid-template-columns: 1fr; gap: 12px; }
+    .expertise-card { padding: 24px 20px; }
+
+    /* Skills orbit - hide on small mobile, show tags instead */
+    .arsenal-orbit { width: 260px; height: 260px; margin-bottom: 48px; }
+    .orbit-center { width: 80px; height: 80px; }
+    .orbit-label { font-size: 0.5rem; }
+    .orbit-name { font-size: 0.85rem; }
+    .orbit-ring-1 { width: 150px; height: 150px; }
+    .orbit-ring-2 { width: 240px; height: 240px; }
+    .orbit-ring-1 .orbit-node { transform: rotate(var(--angle)) translateX(75px); }
+    .orbit-ring-2 .orbit-node { transform: rotate(var(--angle)) translateX(120px); }
+    .orbit-node span { font-size: 0.6rem; padding: 4px 10px; }
+    .arsenal-cards { grid-template-columns: 1fr; gap: 12px; }
+    .arsenal-card { padding: 24px 20px; }
+    .arsenal-card h3 { font-size: 1rem; }
+    .arsenal-tag { font-size: 0.68rem; padding: 5px 12px; }
 
     /* Timeline mobile: single column */
-    .timeline-item { width: 100%; left: 0 !important; padding-left: 48px !important; padding-right: 0 !important; text-align: left !important; }
-    .timeline-line { left: 12px; }
-    .timeline-dot { left: 3px !important; right: auto !important; }
+    .timeline-item { width: 100%; left: 0 !important; padding-left: 40px !important; padding-right: 0 !important; text-align: left !important; padding-bottom: 40px; }
+    .timeline-line { left: 10px; }
+    .timeline-dot { left: 1px !important; right: auto !important; width: 14px; height: 14px; }
     .timeline-left .timeline-header { justify-content: flex-start; }
     .timeline-left .timeline-tech { justify-content: flex-start; }
     .timeline-left .exp-highlights li { padding-left: 18px; padding-right: 0; }
     .timeline-left .exp-highlights li::before { left: 0; right: auto; }
+    .timeline-content { padding: 24px 20px; }
+    .timeline-content h3 { font-size: 1.1rem; }
+    .timeline-content h4 { font-size: 0.82rem; }
+    .exp-highlights li { font-size: 0.82rem; }
+    .timeline-period { font-size: 0.7rem; }
+    .timeline-tech span { font-size: 0.62rem; }
+
+    /* Education */
+    .education-grid { grid-template-columns: 1fr; gap: 12px; }
+    .edu-card { padding: 28px 20px; }
+
+    /* Achievements */
+    .achievements-grid { grid-template-columns: 1fr; gap: 12px; }
+    .achievement-card { padding: 24px 20px; }
+
+    /* Contact */
+    .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+    .contact-detail-item { padding: 16px; }
+    .social-link { padding: 18px; }
+
+    /* Scroll indicator */
+    .scroll-indicator { bottom: 24px; }
+}
+
+@media (max-width: 380px) {
+    .arsenal-orbit { width: 220px; height: 220px; }
+    .orbit-ring-1 { width: 130px; height: 130px; }
+    .orbit-ring-2 { width: 200px; height: 200px; }
+    .orbit-ring-1 .orbit-node { transform: rotate(var(--angle)) translateX(65px); }
+    .orbit-ring-2 .orbit-node { transform: rotate(var(--angle)) translateX(100px); }
+    .orbit-node span { font-size: 0.55rem; padding: 3px 8px; }
+    .orbit-center { width: 68px; height: 68px; }
+    .hero-name { font-size: 1.8rem; }
 }
 
 /* ── Cursor Follower (from JS) ── */
