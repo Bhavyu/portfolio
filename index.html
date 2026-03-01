@@ -471,39 +471,55 @@
                                 <div class="detail-value">Mumbai, Maharashtra</div>
                             </div>
                         </div>
-                        <div class="contact-detail-item">
-                            <div class="detail-icon"><span class="material-symbols-outlined">call</span></div>
-                            <div>
-                                <div class="detail-label">Phone</div>
-                                <a href="tel:+918080606669" class="detail-value">+91 8080606669</a>
-                            </div>
+                    </div>
+                    <div class="social-links-section">
+                        <h3>Connect with me</h3>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/bhavya-gandhi-416183171/" target="_blank" class="social-link">
+                                <div class="social-icon"><span class="material-symbols-outlined">work</span></div>
+                                <div class="social-info">
+                                    <div class="social-name">LinkedIn</div>
+                                    <div class="social-handle">@bhavya-gandhi-416183171</div>
+                                </div>
+                                <svg class="social-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/Bhavyu?tab=repositories" target="_blank" class="social-link">
+                                <div class="social-icon"><span class="material-symbols-outlined">code</span></div>
+                                <div class="social-info">
+                                    <div class="social-name">GitHub</div>
+                                    <div class="social-handle">@Bhavyu</div>
+                                </div>
+                                <svg class="social-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="contact-links-section">
-                    <h3>Connect with me</h3>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/bhavya-gandhi-416183171/" target="_blank" class="social-link">
-                            <div class="social-icon"><span class="material-symbols-outlined">work</span></div>
-                            <div class="social-info">
-                                <div class="social-name">LinkedIn</div>
-                                <div class="social-handle">@bhavya-gandhi-416183171</div>
-                            </div>
-                            <svg class="social-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <div class="contact-form-section">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or idea..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </a>
-                        <a href="https://github.com/Bhavyu?tab=repositories" target="_blank" class="social-link">
-                            <div class="social-icon"><span class="material-symbols-outlined">code</span></div>
-                            <div class="social-info">
-                                <div class="social-name">GitHub</div>
-                                <div class="social-handle">@Bhavyu</div>
-                            </div>
-                            <svg class="social-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
+                        </button>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
                 </div>
             </div>
         </div>
